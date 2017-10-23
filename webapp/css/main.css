@@ -260,6 +260,8 @@ textarea {
 
 #content {
     padding-top:180px;
+    padding-bottom:180px;
+    float: left;
 }
 
 #content ul {
