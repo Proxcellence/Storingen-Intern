@@ -1,0 +1,7 @@
+{
+
+  "welcomeFile": "webapp/start.html",
+  "sendWelcomeFileRedirect": true,
+  "authenticationMethod": "none"
+}
+
