@@ -290,6 +290,11 @@ textarea {
      cursor: pointer;
 }
 
+#content ul a li:hover {
+     border: 2px solid #F50B42;
+     cursor: pointer;
+}
+
 
 
 /* ==========================================================================
