@@ -334,7 +334,7 @@ span.letop {
 
 }
 
-#content img {
+#content .images img {
     width: 12%;
     min-width: 150px;
 }
