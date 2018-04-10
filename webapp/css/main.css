@@ -312,7 +312,7 @@ textarea {
 
 #start ul {
     list-style: none;
-    padding-top: 40px;
+    padding-top: 20px;
     width: 20%;
     float: left;
     height: 100%;
@@ -366,13 +366,14 @@ button.sluiten {
     padding-bottom: 10px;
     padding-right:15px;
     padding-left: 15px;
-    background-color: #dedede;
+    /*background-color: #dedede;*/
     border-radius: 5px;
     color: #00afdb;
 }
 
 button.sluiten:hover {
-    background-color: #ccc;
+    /*background-color: #ccc;*/
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -385,13 +386,13 @@ button.sluiten:hover {
     padding-bottom: 10px;
     padding-right:15px;
     padding-left: 15px;
-    background-color: #dedede;
+    background-color: #fff;
     border-radius: 5px;
     color: #00afdb;
 }
 
 #assistentknop a:hover{
-    background-color: #ccc;
+    text-decoration: underline;
 }
 
 #assistent {
