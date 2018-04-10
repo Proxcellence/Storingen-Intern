@@ -343,10 +343,15 @@ textarea {
     text-indent: 10%;
 }
 
+#assistentknoppen{
+    float: right;
+    margin-right: 4%;
+    margin-top: 25px;
+}
+
 #assistentknop {
     float: right;
-    margin-right: 6%;
-    margin-top: 25px;
+    margin-right: 20px;
 }
 
 .sluiten {
@@ -366,7 +371,7 @@ button.sluiten {
     padding-bottom: 10px;
     padding-right:15px;
     padding-left: 15px;
-    /*background-color: #dedede;*/
+    background-color: #fff;
     border-radius: 5px;
     color: #00afdb;
 }
