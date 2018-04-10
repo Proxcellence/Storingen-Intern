@@ -12,6 +12,47 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+            <style>
+
+            * { border:0; margin:0; padding:0; }
+        p.zoomtekst { position:absolute; top:20px; right:40px; color:#555; font:bold 13px/1 sans-serif;}
+        /* these styles are for the demo, but are not required for the plugin */
+        .zoom {
+            display:inline-block;
+            position: relative;
+            width: 100vw;
+            height: auto;
+            padding-bottom: 100px;
+            background-color: #fff;
+        }
+        
+        /* magnifying glass icon */
+        .zoom:after {
+            content:'';
+            display:block; 
+            width:33px; 
+            height:33px; 
+            position:absolute; 
+            top:0;
+            right:0;
+            background:url(icon.png);
+        }
+
+        .zoom img {
+            display: block;
+            width: 100vw;
+            height: auto;
+        }
+
+        .zoom img::selection { background-color: transparent; }
+      
+      /*
+        #ex3 img:hover { cursor: url(grab.cur), default; }
+        #ex3 img:active { cursor: url(grabbed.cur), default; }
+         */
+    </style>
+
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -21,38 +62,30 @@
         <div id="container">
             <div id="header">
                 <div class="logo"><img src="img/Eneco_logo.png"></div>
-
                 <div id="settings">
-                   
-                <p id="servicecode_tekst">  Hierbij is de (sec)installatie t/m de meterkast inclusief de warmtepomp in beheer van  Eneco DCO, inclusief de klantmeter. (MK/ST verschillende onderhoudspartijen)</p> 
-
-                </div>
+                <!--<div id="servicecode">A4</div> -->
+                <p id="servicecode_tekst">  Hierbij is de (sec)installatie t/m de meterkast inclusief de warmtepomp in beheer van  Eneco DCO, inclusief de klantmeter. (MK/ST verschillende onderhoudspartijen)</p> </div>
 
                 <div id="breadcrumbs">
                     <ul>
-                        <!-- <li class="home"><img src="img/home.svg"></li>-->
-                         <a href="start.html"><li>Menu</li></a>
-                        <li class="active">D3</li>
+                        <!-- <li class="home"><img src="img/home.svg"></li> -->
+                        <a href="start.html"><li>Menu</li></a>
+                        <a href="d3.html"><li>D3</li></a>
+                        <li class="active">Reset IVT Greenline</li>
                     </ul>
                 </div>
             </div>
 
 
             <div id="content">
-                  <ul>
-                       <a href="d3_geen_cv.html"><li>Geen CV</li></a>
-                       <a href="d3_geen_wtw.html"><li>Geen WTW</li></a> 
-                       <a href="d3_lekkage.html"><li>Lekkage</li></a>  
-                       <a href="d3_geluid.html"><li>Geluid</li></a>        
-                       <a href="d3_danfoss.html"><li>Reset Danfoss</li></a>     
-                       <a href="d3_greenline.html"><li>Reset IVT Greenline</li></a>    
-                       <a href="d3_techneco.html"><li>Reset Techneco</li></a>      
-                   </ul>
+
+        <span class='zoom' id='ex3'>
+        <img src='img/d3/d3_greenline.png' alt='Eneco Options'/>
+        <p class="zoomtekst">Klik om te zoomen</p>
+        </span>
 
             </div>
         </div>
-
-
 
 
              <!-- Small screen banner -->
@@ -64,12 +97,19 @@
             </div>
             <!-- small screen  -->
 
-
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+            <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script src='jquery.zoom.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('#ex3').zoom({ on:'click' });          
+        });
+    </script>
 
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
